@@ -16,10 +16,20 @@ struct ContentView: View {
         .ignoresSafeArea()
       
       VStack {
+        Spacer()
+        
         if isLoading {
           LoadingContentView()
         } else {
           LoadedContentView()
+        }
+        
+        Spacer()
+        
+        Button("Load") {
+          withAnimation {
+            self.isLoading.toggle()
+          }
         }
       }
       .padding()

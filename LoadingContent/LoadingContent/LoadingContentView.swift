@@ -49,7 +49,7 @@ struct LoadingContentView: View {
   
   //MARK: - Content Placeholders
   var contentPlaceholders: some View {
-    HStack(spacing: 20) {
+    HStack(alignment: .top) {
       VStack(alignment: .leading, spacing: 10) {
         
         Rectangle()
@@ -69,6 +69,8 @@ struct LoadingContentView: View {
           .frame(maxWidth: 150, maxHeight: 22)
       }
       
+      Spacer()
+      
       Rectangle()
         .clipShape(.rect(cornerRadius: 8))
         .frame(maxWidth: 200, maxHeight: 128)
@@ -80,13 +82,13 @@ struct LoadingContentView: View {
     HStack {
       Rectangle()
         .clipShape(.rect(cornerRadius: 8))
-        .frame(width: 120, height: 18)
+        .frame(width: 120, height: 20)
       
       Spacer()
       
       Rectangle()
         .clipShape(.rect(cornerRadius: 8))
-        .frame(width: 64, height: 18)
+        .frame(width: 90, height: 20)
     }
   }
   
